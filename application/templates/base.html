@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block head %}{% endblock %}
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>{% block title %}{{ title }}{% endblock %}</title>
+</head>
+<body>
+{% include './include/header.html' %}
+{% block body %}{% endblock %}
+</body>
+</html>

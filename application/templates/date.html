@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+    <article class="date">
+        <section class="header">
+            <h2>date</h2>
+        </section>
+        <section class="form">
+            <div>
+                <form method="post">
+                    <label for="datetime">
+                        <span>New Date:</span>
+                        <input type="date" name="datetime" id="datetime">
+                    </label>
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+            <div class="food-calories">
+                {% for foo in result_join %}
+                    <ul>
+                        <li class="food-name">{{ foo.entry_date }}</li>
+                        <li>
+                            <span>Protein:</span>
+                            <span>{{ foo.protein }}</span>
+                        </li>
+                        <li>
+                            <span>Carbohydrates:</span>
+                            <span>{{ foo.carbohydrates }}</span>
+                        </li>
+                        <li>
+                            <span>Fat:</span>
+                            <span>{{ foo.fat }}</span>
+                        </li>
+                        <li>
+                            <span>Calories:</span>
+                            <span>{{ foo.calories }}</span>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('view', date=foo.entry_date ) }}"><span>View Detail</span></a>
+                        </li>
+                    </ul>
+                {% endfor %}
+            </div>
+        </section>
+    </article>
+{% endblock %}

@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-size: 62.5%;
+  font-family: 'Ubuntu', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', 'Verdana', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+header {
+  background: seagreen;
+  width: 100%; }
+  header section {
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center; }
+    header section span {
+      font-size: 1rem;
+      color: white;
+      padding: 0 20px; }
+    header section nav ul {
+      display: flex;
+      list-style: none; }
+      header section nav ul li {
+        padding: 0 10px; }
+        header section nav ul li a {
+          font-size: 1rem;
+          color: white;
+          text-decoration: none;
+          text-transform: uppercase; }
+          header section nav ul li a:hover {
+            text-decoration: underline; }
+
+.foods, .date {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 80%; }
+  .foods section.header, .date section.header {
+    background: seagreen;
+    width: 50%;
+    border-radius: 5px;
+    margin-bottom: 10px; }
+    .foods section.header h2, .date section.header h2 {
+      color: white;
+      padding: 5px 15px;
+      font-weight: normal;
+      font-size: 1rem;
+      text-transform: uppercase; }
+  .foods section.form, .date section.form {
+    width: 100%; }
+    .foods section.form div, .date section.form div {
+      display: flex;
+      justify-content: center; }
+      .foods section.form div form, .date section.form div form {
+        display: flex;
+        flex-direction: column;
+        width: 50%; }
+        .foods section.form div form label, .date section.form div form label {
+          font-size: 1rem;
+          margin: 5px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between; }
+          .foods section.form div form label:hover, .date section.form div form label:hover {
+            background: darkgray; }
+          .foods section.form div form label span, .date section.form div form label span {
+            font-size: 1rem;
+            padding: 0 5px;
+            flex-basis: 250px; }
+          .foods section.form div form label input, .foods section.form div form label select, .date section.form div form label input, .date section.form div form label select {
+            font-size: 1rem;
+            padding: 5px;
+            width: 400px; }
+        .foods section.form div form button, .date section.form div form button {
+          font-size: 1rem;
+          background: seagreen;
+          color: white;
+          border: 0;
+          padding: 7px;
+          width: 350px;
+          align-self: center;
+          border-radius: 5px;
+          margin-top: 10px;
+          text-transform: uppercase; }
+          .foods section.form div form button:hover, .date section.form div form button:hover {
+            cursor: pointer; }
+    .foods section.form .food-calories, .date section.form .food-calories {
+      font-size: 1rem;
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column; }
+      .foods section.form .food-calories ul, .date section.form .food-calories ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-between;
+        margin-top: 10px; }
+        .foods section.form .food-calories ul .food-name, .date section.form .food-calories ul .food-name {
+          background: seagreen;
+          border-radius: 5px;
+          color: white;
+          flex-basis: 150px;
+          height: 35px; }
+        .foods section.form .food-calories ul li, .date section.form .food-calories ul li {
+          padding: 5px; }
+          .foods section.form .food-calories ul li :nth-child(2), .date section.form .food-calories ul li :nth-child(2) {
+            background: darkgray;
+            border-radius: 5px; }
+          .foods section.form .food-calories ul li span, .date section.form .food-calories ul li span {
+            padding: 0 5px; }
+          .foods section.form .food-calories ul li form, .date section.form .food-calories ul li form {
+            width: auto; }
+            .foods section.form .food-calories ul li form button, .date section.form .food-calories ul li form button {
+              width: 100px;
+              margin-top: 0; }

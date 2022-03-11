@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block body %}
+    <article class="foods">
+        <section class="header">
+            <h2>Foods</h2>
+        </section>
+        <section class="form">
+            <div>
+                <form action="{{ url_for('food') }}" method="post">
+                    <label for="food-name">
+                        <span>Food name:</span>
+                        <input type="text" name="food-name" id="food-name">
+                    </label>
+                    <label for="protein">
+                        <span>Protein:</span>
+                        <input type="number" name="protein" id="protein">
+                    </label>
+                    <label for="carbohydrates">
+                        <span>Carbohydrates:</span>
+                        <input type="number" name="carbohydrates" id="carbohydrates">
+                    </label>
+                    <label for="fat">
+                        <span>Fat:</span>
+                        <input type="number" name="fat" id="fat">
+                    </label>
+                    <button type="submit">Add</button>
+                </form>
+            </div>
+            <div class="food-calories">
+                {% for foo in result %}
+                <ul>
+                    <li class="food-name">{{ foo.name }}</li>
+                    <li>
+                        <span>Protein:</span>
+                        <span>{{ foo.protein }}</span>
+                    </li>
+                    <li>
+                        <span>Carbohydrates:</span>
+                        <span>{{ foo.carbohydrates }}</span>
+                    </li>
+                    <li>
+                        <span>Fat:</span>
+                        <span>{{ foo.fat }}</span>
+                    </li>
+                    <li>
+                        <span>Calories:</span>
+                        <span>{{ foo.calories }}</span>
+                    </li>
+                </ul>
+                {% endfor %}
+            </div>
+        </section>
+    </article>
+{% endblock %}
