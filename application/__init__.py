@@ -1,7 +1,7 @@
 from flask import Flask, g, render_template
 import os, sqlite3
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='templates')
 app.config['SECRET_KEY'] = os.urandom(24).hex()
 app.config['DEBUG'] = True
 
